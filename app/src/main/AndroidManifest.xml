@@ -10,6 +10,8 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+
+
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name" >
@@ -19,6 +21,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
         <activity
             android:name=".DetailActivity"
             android:label="@string/title_activity_detail"
@@ -27,6 +31,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.android.sunshine.app.MainActivity" />
         </activity>
+
+
         <activity
             android:name=".SettingsActivity"
             android:label="@string/title_activity_settings"
@@ -35,9 +41,20 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.android.sunshine.app.MainActivity" />
         </activity>
+
+
         <provider
             android:authorities="com.example.android.sunshine.app"
-            android:name=".data.WeatherProvider" />
+            android:name=".data.WeatherProvider"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="com.MyApp.LICENSE_TO_KILL" />
     </application>
+
+
+    <permission
+        android:name="com.MyApp.LICENSE_TO_KILL"
+        android:protectionLevel="dangerous"
+        android:label="LICENSE TO KILL" />
 
 </manifest>
