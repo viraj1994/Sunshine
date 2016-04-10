@@ -51,6 +51,13 @@
             android:enabled="true"
             android:exported="true"
             android:permission="com.MyApp.LICENSE_TO_KILL" />
+
+
+        <service
+            android:name=".Service.SunshineService"/>
+
+        <receiver
+            android:name=".Service.SunshineService$AlarmReceiver" />
     </application>
 
 
